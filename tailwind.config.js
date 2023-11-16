@@ -17,6 +17,7 @@ module.exports = {
         'myGrey': '#868686',
         'brhv': '#246BFD',
         'trobule': '#FF4848',
+        'arrowCol': 'rgb(0,0,0,0) #FF4848 rgb(0,0,0,0) rgb(0,0,0,0)'
       },
       
     },

@@ -1,13 +1,17 @@
 <template>
     <div class="">
-      <InputText v-tooltip="{
+      <InputText v-tooltip.right="{
         value: 'Имя не может содержать символы или цифры, а так же его длина должна быть от 2 до 12 букв',
         pt: {
-          root: 'ml-[10px] ',
+          root: 'ml-[12px] ',
           text: 'bg-trobule rounded-xl p-[5px] text-white w-[211px] h-auto',
           arrow: {
+            class: [
+              'absolute w-0 h-0 border-[10px] border-solid border-arrowCol',
+            ],
             style: {
-              borderColor: 'bg-trobule'
+              left: '-18px',
+              top: '45%'
             }
           }
         }
@@ -21,8 +25,12 @@
           root: 'ml-[10px] ',
           text: 'bg-trobule rounded-xl p-[5px] text-white w-[211px] h-auto',
           arrow: {
+            class: [
+              'absolute w-0 h-0 border-[10px] border-solid border-arrowCol',
+            ],
             style: {
-              borderColor: 'bg-trobule'
+              left: '-18px',
+              top: '45%'
             }
           }
         }
@@ -65,6 +73,12 @@ export default {
     }
   }
 }
+
+
+
+
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
