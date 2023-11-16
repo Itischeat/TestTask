@@ -13,8 +13,8 @@ import Tooltip from 'primevue/tooltip';
 const app = createApp(App);
 
 app.use(PrimeVue)
+app.directive('tooltip', Tooltip);
 app.component('InputText', InputText)
 app.component('InputGroup', InputGroup)
 app.component('Button', Button)
-app.directive('tooltip', Tooltip);
 app.mount('#app')
