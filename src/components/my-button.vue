@@ -1,7 +1,35 @@
 <template>
-    <InputText @change="sendFullName" :class="Validation(fullName.firstName) ? '' : 'border-2 border-trobule outline-0'" v-model="fullName.firstName" class=" rounded-[14px] placeholder:text-Wh text-[14px] outline-none outline-offset-0 focus:outline-brhv  text-white w-[300px] px-[16px] py-[10.5px] h-[44px] bg-primary shadow-myShd" placeholder="Имя"></InputText>
-    <InputText @change="sendFullName" :class="Validation(fullName.secondName) ? '' : 'border-2 border-trobule outline-0'" v-model="fullName.secondName" class=" rounded-[14px] placeholder:text-Wh text-[14px] outline-none outline-offset-0 focus:outline-brhv text-white w-[300px] px-[16px] py-[10.5px] mt-[16px] h-[44px] bg-primary shadow-myShd" placeholder="Фамилия"></InputText>
-</template>
+    <div class="">
+      <InputText v-tooltip="{
+        value: 'Имя не может содержать символы или цифры, а так же его длина должна быть от 2 до 12 букв',
+        pt: {
+          root: 'ml-[10px] ',
+          text: 'bg-trobule rounded-xl p-[5px] text-white w-[211px] h-auto',
+          arrow: {
+            style: {
+              borderColor: 'bg-trobule'
+            }
+          }
+        }
+      }" 
+      @change="sendFullName" :class="Validation(fullName.firstName) ? '' : 'border-2 border-trobule outline-0'" v-model="fullName.firstName" class=" rounded-[14px] placeholder:text-Wh text-[14px] outline-none outline-offset-0 focus:outline-brhv  text-white w-[300px] px-[16px] py-[10.5px] h-[44px] bg-primary shadow-myShd" placeholder="Имя"></InputText>
+    </div>
+    <div class="">
+      <InputText v-tooltip="{
+        value: 'Фамилия не может содержать символы или цифры, а так же его длина должна быть от 2 до 12 букв',
+        pt: {
+          root: 'ml-[10px] ',
+          text: 'bg-trobule rounded-xl p-[5px] text-white w-[211px] h-auto',
+          arrow: {
+            style: {
+              borderColor: 'bg-trobule'
+            }
+          }
+        }
+      }"  
+      @change="sendFullName" :class="Validation(fullName.secondName) ? '' : 'border-2 border-trobule outline-0'" v-model="fullName.secondName" class=" rounded-[14px] placeholder:text-Wh text-[14px] outline-none outline-offset-0 focus:outline-brhv text-white w-[300px] px-[16px] py-[10.5px] mt-[16px] h-[44px] bg-primary shadow-myShd" placeholder="Фамилия"></InputText>
+    </div>
+  </template>
 
 <script lang="ts">
 export default {
